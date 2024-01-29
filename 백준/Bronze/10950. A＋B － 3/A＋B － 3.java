@@ -1,20 +1,27 @@
-import java.util.Scanner;
-public class Main {
-	   public static void main(String args[]) {
-		   Scanner scn = new Scanner(System.in);
-		   int n = scn.nextInt();
-		   int arr[] = new int[n]; 
-		   
-		   for(int i = 0; i<n; i++) {
-			   int a = scn.nextInt();
-			   int b = scn.nextInt();
-			   
-			   arr[i] = a+b;
-		   }
-		   scn.close();
-		   for(int k:arr) {
-			   System.out.println(k);
-		   }
-	      
-	}
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+public class Main{
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st;
+        int num = Integer.parseInt(br.readLine());
+        
+        
+        int a,b;
+        
+        for(int i=0; i<num; i++){
+            st = new StringTokenizer(br.readLine()," ");
+            a = Integer.parseInt(st.nextToken());
+            b = Integer.parseInt(st.nextToken());
+            bw.write(a+b + "\n");
+        }
+        bw.flush();
+        br.close();
+        bw.close();
+    }
 }
