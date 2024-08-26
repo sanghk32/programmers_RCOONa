@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
+        StringBuilder sb = new StringBuilder();
 
         int n = Integer.parseInt(br.readLine());
 
@@ -24,31 +25,33 @@ public class Main {
                     break;
                 case 2:
                     if(!stack.isEmpty()){
-                        System.out.println(stack.pop());
+                        sb.append(stack.pop()+"\n");
                     }else{
-                        System.out.println(-1);
+                        sb.append(-1+"\n");
                     }
                     break;
                 case 3:
-                    System.out.println(stack.size());
+                    sb.append(stack.size()+"\n");
                     break;
                 case 4:
                     if(stack.isEmpty()){
-                        System.out.println(1);
+                        sb.append(1+"\n");
                     }else{
-                        System.out.println(0);
+                        sb.append(0+"\n");
                     }
                     break;
                 case 5:
                     if(!stack.isEmpty()){
-                        System.out.println(stack.peek());
+                        sb.append(stack.peek()+"\n");
                     }else{
-                        System.out.println(-1);
+                        sb.append(-1+"\n");
                     }
                     break;
 
             }
 
         }
+        String result = sb.toString();
+        System.out.println(result);
     }
 }
