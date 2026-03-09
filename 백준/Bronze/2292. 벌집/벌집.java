@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+
 
         int n = Integer.parseInt(br.readLine());
         int max = 1;
@@ -16,8 +18,9 @@ public class Main {
             max += level * 6;
             level++;
         }
+        sb.append(level);
 
-        System.out.println(level);
+        System.out.println(sb);
 
 
     }
